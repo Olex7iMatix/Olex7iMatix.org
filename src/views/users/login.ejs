@@ -1,0 +1,29 @@
+<% include('../layouts/header.ejs') %>
+
+<h1>Login to your CatAccount account</h1>
+
+<% 
+
+    if(typeof message !== 'undefined') {
+        %><p class="message"><%= message %></p>
+    <%}
+
+%> 
+
+<form action="" method="post">
+
+    <div class="email-input">
+        <label for="username-email">Enter Email:</label>
+        <input type="email" name="email" placeholder="Enter email" required>
+    </div><br>
+
+    <div class="password-input">
+        <label for="username">Enter Password:</label>
+        <input type="password" name="password" placeholder="Enter Password" required>
+    </div><br>
+
+    <input type="submit" value="Login">
+
+</form>
+
+<% include('../layouts/footer.ejs') %>

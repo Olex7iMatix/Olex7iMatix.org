@@ -1,0 +1,13 @@
+<% include('../layouts/header.ejs') %>
+
+<h1>Verify you'r CatAccount!</h1>
+
+<% 
+
+    if(typeof message !== 'undefined') {
+        %><p class="message"><%= message %></p>
+    <%}
+
+%>
+
+<% include('../layouts/footer.ejs') %>

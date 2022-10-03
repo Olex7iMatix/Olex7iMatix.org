@@ -1,0 +1,44 @@
+<% include('../layouts/header.ejs') %>
+
+<h1>User Registration Form</h1>
+
+<% 
+
+    if(typeof message !== 'undefined') {
+        %><p class="message"><%= message %></p>
+    <%}
+
+%> 
+
+<form action="" method="post" enctype="multipart/form-data">
+
+    <div class="username-input">
+        <label for="username">Username:</label>
+        <input type="text" name="username" placeholder="Enter username" required>
+    </div><br>
+
+    <div class="email-input">
+        <label for="email">Email:</label>
+        <input type="email" name="email" placeholder="Enter Email" required>
+    </div><br>
+
+    <div class="avatar-input">
+        <label for="username">Select Avatar:</label>
+        <input type="file" name="avatar">
+    </div><br>
+
+    <div class="password-input">
+        <label for="username">Enter Password:</label>
+        <input type="password" name="password" placeholder="Enter Password" required>
+    </div><br>
+
+    <div class="confpassword-input">
+        <label for="username">Confirm Password:</label>
+        <input type="password" name="confpassword" placeholder="Confirm Password" required>
+    </div><br><br>
+
+    <input type="submit" value="Register">
+
+</form>
+
+<% include('../layouts/footer.ejs') %>
